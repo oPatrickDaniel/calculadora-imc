@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calcular IMC</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>CALCULADORA DE IMC</h1>
+            <p>Use a calculadora de imc (Índice de Massa Corporal) para saber seu peso está dentro do intervalo saudável
+                com base em sua altura. Forneça sua altura e peso e receba uma maneira fácil e rápida de monitorar sua
+                saúde e ajudá-lo a tomar decisões informadas sobre sua dieta e estilo de vida.
+            </p>
+        </header>
+
+        <main>
+            <section class="data">
+                <h3>Altura(cm)*</h3>
+                <input type="number" name="height" id="height" min="" value="">
+                <h3>Peso(kg)*</h3>
+                <input type="number" name="weight" id="Weight" min="7" value="">
+                <input onclick="innerHtml()" type="submit" value="CALCULAR">
+                <h2 id="displayNone1" class="nan displayNone">Preencha corretamente todos os dados</h2>
+            </section>
+            <section id="displayNone2" class="resultArea displayNone">
+                <h2>Resultado:</h2>
+                <p>Seu IMC é de <span id="result" class="bold">26.3 kg/m2.</span></p>
+
+                <p> De acordo com a Organização Mundial da Saúde, seu IMC está <span class="imcStatus">abaixo</span>
+                    do recomendado para a sua altura. Para <span class="imcStatus">atingir</span> um valor de IMC
+                    normal, seu peso deve estar entre <span id="imcMedia">66.8 e 89.9 kg</span>.
+                </p>
+
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>IMC</th>
+                        <th>Peso</th>
+                    </tr>
+                    <tr id="thin">
+                        <td>Magreza</td>
+                        <td>&lt; 18.5</td>
+                        <td class="weightMargin">&lt; 66.8 Kg</td>
+                    </tr>
+                    <tr id="normal">
+                        <td>Normal</td>
+                        <td>18.5 a 24.9</td>
+                        <td class="weightMargin">66.8 a 89.9 Kg</td>
+                    </tr>
+                    <tr id="overweight">
+                        <td>Sobrepeso</td>
+                        <td>24.9 a 30</td>
+                        <td class="weightMargin">89.9 a 108.3 Kg</td>
+                    </tr>
+                    <tr id="obesity">
+                        <td>Obesidade</td>
+                        <td>&gt; 30</td>
+                        <td class="weightMargin">&gt; 108.3 Kg</td>
+                    </tr>
+                </table>
+
+                <p class="note">Nota: o cálculo de IMC não leva em consideração a composição corporal. Por esse motivo,
+                    pessoas com muita massa muscular, como é o caso de alguns atletas, podem apresentar um IMC acima do
+                    normal. O ideal éæ consultar um nutricionista para fazer uma avaliação mais detalhada.</p>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

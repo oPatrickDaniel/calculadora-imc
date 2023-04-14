@@ -1,0 +1,147 @@
+/* importing font */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;700&display=swap');
+
+/* resetting css */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+/* colors */
+
+:root {
+  --azulEscuro: rgb(19, 33, 112);
+  --vermelhoEscuro: rgb(223, 37, 37);
+  --amareloClaro: rgb(242, 218, 120);
+  --borderColor: rgba(0, 0, 0, 0.14);
+  --white: rgb(255, 255, 255);
+  --backGroundBlue: rgb(228, 248, 248);
+}
+
+/* js class */
+
+.displayNone {
+  display: none;
+}
+
+.yellow {
+  background-color: var(--amareloClaro);
+}
+
+/* body */
+
+body {
+  font-family: 'Sora', sans-serif;
+}
+
+.container {
+  max-width: 550px;
+  margin: auto;
+  padding: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* header */
+
+header h1 {
+  text-align: center;
+  color: var(--vermelhoEscuro);
+}
+
+header p {
+  margin: 1em 0;
+}
+
+/* section data */
+
+.data h3 {
+  color: var(--azulEscuro);
+  font-size: 15px;
+  margin: 15px 0 5px 0;
+}
+
+.data [type="number"] {
+  padding: 5px 0 5px 5px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.data [type="submit"] {
+  margin-top: 1em;
+  color: var(--white);
+  background-color: var(--azulEscuro);
+  border: none;
+  border-radius: 1em;
+  padding: 12px;
+  width: 30%;
+  text-align: center;
+}
+
+.data [type="submit"]:hover {
+  opacity: 0.9;
+  transition-duration: 0.3s;
+}
+
+section .nan {
+  margin-top: 10px;
+  color: red;
+  text-align: left;
+  font-size: 16px;
+  font-size: 1.2em;
+}
+
+
+/* section result */
+
+.resultArea {
+  margin-top: 2em;
+  padding: 1em;
+  border: 1px solid var(--borderColor);
+  background-color: var(--backGroundBlue);
+}
+
+.resultArea h2 {
+  color: var(--azulEscuro);
+}
+
+.resultArea #result {
+  margin-top: 10px;
+}
+
+.resultArea p {
+  margin-top: 1em;
+}
+
+.resultArea table {
+  width: 100%;
+  background-color: var(--white);
+  margin-top: 10px;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+.resultArea table tr th {
+  padding: 6px;
+  background-color: var(--azulEscuro);
+  color: var(--white);
+}
+
+.resultArea table tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.note {
+  font-size: 12px;
+  font-family: serif;
+}
