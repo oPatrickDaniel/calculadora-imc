@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Calcular IMC</title>
+    <script src="./script/script.js" defer></script>
 </head>
 
 <body>
@@ -21,22 +22,17 @@
         </header>
 
         <main>
-            <section class="data">
+            <section class="data-section">
                 <h3>Altura(cm)*</h3>
-                <input type="number" name="height" id="height" min="" value="">
+                <input type="number" id="height">
                 <h3>Peso(kg)*</h3>
-                <input type="number" name="weight" id="Weight" min="7" value="">
-                <input onclick="innerHtml()" type="submit" value="CALCULAR">
-                <h2 id="displayNone1" class="nan displayNone">Preencha corretamente todos os dados</h2>
+                <input type="number" id="weight">
+                <input id="submit" type="submit" value="CALCULAR">
+                <div id="incomplete-data"></div>
             </section>
-            <section id="displayNone2" class="resultArea displayNone">
-                <h2>Resultado:</h2>
-                <p>Seu IMC é de <span id="result" class="bold">26.3 kg/m2.</span></p>
+            <section class="table-container">
 
-                <p> De acordo com a Organização Mundial da Saúde, seu IMC está <span class="imcStatus">abaixo</span>
-                    do recomendado para a sua altura. Para <span class="imcStatus">atingir</span> um valor de IMC
-                    normal, seu peso deve estar entre <span id="imcMedia">66.8 e 89.9 kg</span>.
-                </p>
+                <div id="result-txt-area"></div>
 
                 <table>
                     <tr>
@@ -44,37 +40,38 @@
                         <th>IMC</th>
                         <th>Peso</th>
                     </tr>
-                    <tr id="thin">
+                    <tr id="thin-line">
                         <td>Magreza</td>
                         <td>&lt; 18.5</td>
-                        <td class="weightMargin">&lt; 66.8 Kg</td>
+                        <td id="thin" class="weightMargin"></td>
                     </tr>
-                    <tr id="normal">
+                    <tr id="normal-line">
                         <td>Normal</td>
                         <td>18.5 a 24.9</td>
-                        <td class="weightMargin">66.8 a 89.9 Kg</td>
+                        <td id="normal" class="weightMargin"></td>
                     </tr>
-                    <tr id="overweight">
+                    <tr id="overweight-line">
                         <td>Sobrepeso</td>
                         <td>24.9 a 30</td>
-                        <td class="weightMargin">89.9 a 108.3 Kg</td>
+                        <td id="overweight" class="weightMargin"></td>
                     </tr>
-                    <tr id="obesity">
+                    <tr id="obesity-line">
                         <td>Obesidade</td>
                         <td>&gt; 30</td>
-                        <td class="weightMargin">&gt; 108.3 Kg</td>
+                        <td id="obesity" class="weightMargin">
+                        </td>
                     </tr>
                 </table>
 
-                <p class="note">Nota: o cálculo de IMC não leva em consideração a composição corporal. Por esse motivo,
+                <p class="footer-note">Nota: o cálculo de IMC não leva em consideração a composição corporal. Por esse
+                    motivo,
                     pessoas com muita massa muscular, como é o caso de alguns atletas, podem apresentar um IMC acima do
-                    normal. O ideal éæ consultar um nutricionista para fazer uma avaliação mais detalhada.</p>
+                    normal. O ideal é se consultar um nutricionista para fazer uma avaliação mais detalhada.</p>
 
             </section>
         </main>
     </div>
 
-    <script src="./js/script.js"></script>
 </body>
 
 </html>
